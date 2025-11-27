@@ -1,0 +1,41 @@
+[
+  {
+    "name": "user",
+    "fields": [
+      {
+        "name": "Email",
+        "type": "text",
+        "description": "User email address for login",
+        "options": null
+      },
+      {
+        "name": "Password",
+        "type": "text",
+        "description": "User password (in production should be hashed)",
+        "options": null
+      },
+      {
+        "name": "Name",
+        "type": "text",
+        "description": "Full name of the user",
+        "options": null
+      },
+      {
+        "name": "Role",
+        "type": "text",
+        "description": "User role: superuser, admin, or user",
+        "options": [
+          "superuser",
+          "admin",
+          "user"
+        ]
+      },
+      {
+        "name": "Version",
+        "type": "text",
+        "description": "System version",
+        "options": null
+      }
+    ]
+  }
+]

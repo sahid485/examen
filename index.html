@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Administración - Login</title>
+    <meta name="description" content="Sistema de administración con control de usuarios y roles">
+    <meta name="keywords" content="admin, login, dashboard, gestión">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #dbeafe;
+            --accent-color: #1e40af;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --background: #ffffff;
+            --sidebar-width: 280px;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--background);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            @apply shadow-lg;
+            background-color: var(--accent-color);
+        }
+
+        .input-field {
+            @apply w-full px-4 py-3 rounded-lg border transition-all duration-200;
+            border-color: var(--border-color);
+        }
+
+        .input-field:focus {
+            @apply outline-none ring-2;
+            border-color: var(--primary-color);
+            ring-color: var(--secondary-color);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="utils/auth.js"></script>
+    <script type="text/babel" src="components/LoginForm.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
